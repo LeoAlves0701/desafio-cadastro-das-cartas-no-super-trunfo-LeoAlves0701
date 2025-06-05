@@ -8,8 +8,13 @@ int main(){
     char nome1[50];
     int populacao1;
     float area1;
-    float pib1;
+    double pib1;
     int pontos1;
+    double densidade1;
+    double pibPerCapita1;
+
+    densidade1 = (double)populacao1 / area1; // Cálculo da densidade demográfica
+    pibPerCapita1 = (pib1 * 1000000000.0) / (double)populacao1; // Cálculo do PIB per capita
 
     //Variaveis carta 2
     char estado2[4];
@@ -17,8 +22,13 @@ int main(){
     char nome2[50];
     int populacao2;
     float area2;
-    float pib2;
+    double pib2;
     int pontos2;
+    double densidade2;
+    double pibPerCapita2;
+
+    densidade2 = (double)populacao2 / area2; // Cálculo da densidade demográfica
+    pibPerCapita2 = (pib2 * 1000000000.0) / (double)populacao2; // Cálculo do PIB per capita
 
 //entrada de dados da carta 1
     printf("Digite o estado da carta 1(ex:A,B,C...): ");
@@ -37,10 +47,12 @@ int main(){
     scanf("%f", &area1);
 
     printf("Digite o PIB da carta 1: ");
-    scanf("%f", &pib1);
+    scanf("%lf", &pib1);
 
     printf("Digite o número de pontos turísticos da carta 1: ");
     scanf("%d", &pontos1);
+
+
 
 //entrada de dados da carta 2
     printf("\nDigite o estado da carta 2(ex:A,B,C...): ");
@@ -59,10 +71,12 @@ int main(){
     scanf("%f", &area2);
 
     printf("Digite o PIB da carta 2: ");
-    scanf("%f", &pib2);
+    scanf("%lf", &pib2);
 
     printf("Digite o número de pontos turísticos da carta 2: ");
     scanf("%d", &pontos2);
+
+
 
 //Exibição carta 1
     printf("\nCarta 1:\n");
@@ -79,6 +93,10 @@ int main(){
 
     printf("Número de Pontos turísticos: %d\n", pontos1);
 
+    printf("Densidade Demográfica: %.2f hab/km²\n", densidade1);
+
+    printf("PIB per Capita: R$%.2f\n", pibPerCapita1);
+
 //Exibição carta 2
     printf("\nCarta 2:\n");
 
@@ -94,9 +112,54 @@ int main(){
 
     printf("Número de Pontos turísticos: %d\n", pontos2);
 
+    printf("Densidade Demográfica: %.2f hab/km²\n", densidade2);
+
+    printf("PIB per Capita: R$%.2f\n", pibPerCapita2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     return 0;
-
 }
-//FIM do código
